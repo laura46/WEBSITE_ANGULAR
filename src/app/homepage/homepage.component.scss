@@ -1,0 +1,9 @@
+@import "../../styles.scss";
+.button-text {
+  color: $primary !important;
+  width: fit-content;
+}
+.button-text-accent {
+    color: $accent !important;
+    width: fit-content;
+}
