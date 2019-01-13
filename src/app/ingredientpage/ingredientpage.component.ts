@@ -12,12 +12,13 @@ export class IngredientpageComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   dataSource = new MatTableDataSource;
-  //displayedColumns: string[] = ['name'];
+ 
   displayedColumns: string[] = ['ingredient'];
 
   public ingredients = data.ingredients;
-  public result = [];
   public searchBarEmpty = true;
+  public resultsEmpty = true;
+  public cleanInput: string;
 
   constructor() { }
 
@@ -29,15 +30,16 @@ export class IngredientpageComponent implements OnInit {
 
     this.searchBarEmpty = false;
 
-    let cleanInput = input.toLowerCase().replace(/\s/g, "");
+    this.cleanInput = input.toLowerCase().replace(/\s/g, "");
 
-    this.result = this.ingredients.filter(i => i.toLowerCase().replace(/\s/g, "").indexOf(cleanInput) > -1);
+    let results = this.ingredients.filter(i => i.toLowerCase().replace(/\s/g, "").indexOf(this.cleanInput) > -1);
     
+    this.dataSource.data = results.slice(0, 5);
+
     if(input == ""){
       this.searchBarEmpty = true;
+      this.dataSource.data = [];
     }
-
-    console.log(this.result);
   }
 
 }

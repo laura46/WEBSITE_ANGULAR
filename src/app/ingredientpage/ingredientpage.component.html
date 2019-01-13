@@ -17,27 +17,22 @@
         <mat-icon style="margin: 6px;" color='accent' matPrefix>search</mat-icon>
         <input (input)="searchIngredients($event.target.value)" style="margin: 2px;" color="accent" matInput type="text" placeholder="Harmful ingredient finder" >
     </mat-form-field>
-    <div *ngIf="this.result" class="search-output">
-            <div class="mat-elevation-z8">
-                <table style="width: -webkit-fill-available;" mat-table [dataSource]="this.result">
-                    <!-- Symbol Column -->
-                      <ng-container matColumnDef="ingredient">
-                        <th mat-header-cell *matHeaderCellDef> INGREDIENT </th>
-                        <td mat-cell *matCellDef="let element"> {{element}} </td>
-                      </ng-container>
-                  
-                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                    </table>
-                  
-                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-                  </div>
+    <div *ngIf="dataSource.data.length > 0" class="search-output" style="max-width: 420px; width: 100%;">
+        <table style="width:100%;" mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="ingredient">
+                <th mat-header-cell *matHeaderCellDef> INGREDIENTS </th>
+                <td mat-cell *matCellDef="let ingredient" > {{ingredient}} </td>
+            </ng-container>
+                
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
     </div>
     <div *ngIf="this.searchBarEmpty">
         <h3 class="search-div">Please type your ingredients in the searchbar above.</h3>
     </div>
-    <div *ngIf="!this.result">
-        <h3 class="search-div">No ingredients found! Your product <i>MIGHT</i> be safe.</h3>
+    <div *ngIf="this.dataSource.data.length == 0 && !this.searchBarEmpty">
+        <h3 class="search-div">No harmful ingredients found! Your product <u>MIGHT</u> be safe.</h3>
     </div>
 </div>
 
