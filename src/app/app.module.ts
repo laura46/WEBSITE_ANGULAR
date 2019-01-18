@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
-  MatTableModule, MatPaginatorModule, MatTooltipModule } from '@angular/material';
+  MatTableModule, MatCardModule, MatTooltipModule } from '@angular/material';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -52,7 +52,7 @@ const appRoutes: Routes = [
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatButtonModule, MatToolbarModule, MatIconModule,MatInputModule,MatTableModule,
-    MatTooltipModule,
+    MatTooltipModule, MatCardModule,
     RouterModule.forRoot(appRoutes)
 
   ],

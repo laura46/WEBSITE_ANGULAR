@@ -1,5 +1,12 @@
-<div style="height:100%;">
-<p>
-  haircarepage works!
-</p>
+<div style="height:100%;" fxLayout="column" fxLayoutAlign="start center">
+  <p>
+    I got most my information from the internet, youTube especially is a great place to learn.
+  </p>
+  <div *ngFor="let yt of youtubers">
+    <mat-card>
+      <mat-card-header>
+        <img [src]="yt.img">
+      </mat-card-header>
+    </mat-card>
+  </div>
 </div>
