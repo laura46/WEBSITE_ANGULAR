@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as data from '../../assets/harmful-ingredients.json';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatTableDataSource } from '@angular/material';
+
 
 @Component({
   selector: 'app-ingredientpage',
@@ -8,8 +9,6 @@ import { MatPaginator, MatTableDataSource } from '@angular/material';
   styleUrls: ['./ingredientpage.component.scss']
 })
 export class IngredientpageComponent implements OnInit {
-  
-  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   dataSource = new MatTableDataSource;
  
@@ -23,7 +22,7 @@ export class IngredientpageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
+
   }
 
   searchIngredients(input: string) {
@@ -33,13 +32,15 @@ export class IngredientpageComponent implements OnInit {
     this.cleanInput = input.toLowerCase().replace(/\s/g, "");
 
     let results = this.ingredients.filter(i => i.toLowerCase().replace(/\s/g, "").indexOf(this.cleanInput) > -1);
+    let shortList = results.slice(0, 5);
     
-    this.dataSource.data = results.slice(0, 5);
+    this.dataSource.data = shortList;
 
     if(input == ""){
       this.searchBarEmpty = true;
       this.dataSource.data = [];
     }
   }
+
 
 }

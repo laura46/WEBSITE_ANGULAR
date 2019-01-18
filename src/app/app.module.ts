@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
-  MatTableModule, MatPaginatorModule } from '@angular/material';
+  MatTableModule, MatPaginatorModule, MatTooltipModule } from '@angular/material';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,7 @@ import { HaircarepageComponent } from './haircarepage/haircarepage.component';
 import { ProductsComponent } from './productspage/products/products.component';
 import { ProductspageComponent } from './productspage/productspage.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
+import { HighlightPipe } from './ingredientpage/highlight.pipe';
 
 
 const appRoutes: Routes = [
@@ -42,14 +43,16 @@ const appRoutes: Routes = [
     HaircarepageComponent,
     ProductsComponent,
     ProductspageComponent,
-    ContactpageComponent
+    ContactpageComponent,
+    HighlightPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatToolbarModule, MatIconModule,MatInputModule,MatTableModule,MatPaginatorModule,
+    MatButtonModule, MatToolbarModule, MatIconModule,MatInputModule,MatTableModule,
+    MatTooltipModule,
     RouterModule.forRoot(appRoutes)
 
   ],
