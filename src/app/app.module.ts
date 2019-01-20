@@ -7,7 +7,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
   MatTableModule, MatCardModule, MatTooltipModule } from '@angular/material';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -54,10 +53,9 @@ const appRoutes: Routes = [
     MatButtonModule, MatToolbarModule, MatIconModule,MatInputModule,MatTableModule,
     MatTooltipModule, MatCardModule,
     RouterModule.forRoot(appRoutes)
-
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 
 })
 export class AppModule { }

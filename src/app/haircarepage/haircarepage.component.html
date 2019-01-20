@@ -1,12 +1,33 @@
-<div style="height:100%;" fxLayout="column" fxLayoutAlign="start center">
+<div fxLayout="column" fxLayoutAlign="start center">
   <p>
-    I got most my information from the internet, youTube especially is a great place to learn.
+    YouTube especially is a great place to learn from different people all over the world.
   </p>
-  <div *ngFor="let yt of youtubers">
-    <mat-card>
+  <p>
+    You can follow people that match your hairtype or you can draw inspiration from different sources.
+  </p>
+  <p>
+    These are some of the channels I found very useful.
+  </p>
+  <div fxLayout="row wrap" fxLayoutGap="24px" class="card-container">
+    <mat-card class="youtuber-card" *ngFor="let yt of this.youtubers">
       <mat-card-header>
-        <img [src]="yt.img">
+        <img mat-card-avatar [src]="yt.img">
+        <mat-card-title class="title" [innerHtml]="yt.name"></mat-card-title>
+        <mat-card-subtitle [innerHtml]="yt.channelName"></mat-card-subtitle>
       </mat-card-header>
+      <iframe width="420" height="315" [src]="sanitize(yt.linkVideo)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+      <mat-card-content>
+        <p class="description" [innerHtml]="yt.description">
+        </p>
+      </mat-card-content>
+      <mat-card-actions fxLayout="row" fxLayoutAlign="space-between">
+        <button  color="accent" mat-button (click)="goto(yt.linkChannel)">VISIT CHANNEL</button>
+        <button  mat-icon-button (click)="favor(yt.favorite)">
+          <mat-icon *ngIf="yt.favorite" color="primary">favorite</mat-icon>
+          <mat-icon *ngIf="!yt.favorite" color="primary">favorite_border</mat-icon>
+        </button>
+      </mat-card-actions>
     </mat-card>
   </div>
 </div>
