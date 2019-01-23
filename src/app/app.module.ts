@@ -4,6 +4,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
+import { YoutubePlayerModule } from 'ngx-youtube-player';
+
 import { MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
   MatTableModule, MatCardModule, MatTooltipModule } from '@angular/material';
 
@@ -17,7 +19,6 @@ import { IngredientpageComponent } from './ingredientpage/ingredientpage.compone
 import { HaircarepageComponent } from './haircarepage/haircarepage.component';
 import { ProductsComponent } from './productspage/products/products.component';
 import { ProductspageComponent } from './productspage/productspage.component';
-import { ContactpageComponent } from './contactpage/contactpage.component';
 import { HighlightPipe } from './ingredientpage/highlight.pipe';
 
 
@@ -26,8 +27,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'check', component: IngredientpageComponent },
   { path: 'care', component: HaircarepageComponent },
-  { path: 'products', component: ProductspageComponent },
-  { path: 'contact', component: ContactpageComponent }
+  { path: 'products', component: ProductspageComponent }
 ]
 
 
@@ -42,7 +42,6 @@ const appRoutes: Routes = [
     HaircarepageComponent,
     ProductsComponent,
     ProductspageComponent,
-    ContactpageComponent,
     HighlightPipe
   ],
   imports: [
@@ -52,7 +51,8 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatButtonModule, MatToolbarModule, MatIconModule,MatInputModule,MatTableModule,
     MatTooltipModule, MatCardModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    YoutubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

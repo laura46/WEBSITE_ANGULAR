@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { YoutubersService } from '../youtubers.service';
-import { DomSanitizer } from '@angular/platform-browser';
+import { from } from 'rxjs';
 
 
 @Component({
@@ -11,29 +11,32 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class HaircarepageComponent implements OnInit {
 
   public youtubers;
+  player: YT.Player;
 
-  constructor(private youtubeService: YoutubersService, private sanitizer: DomSanitizer) {
+  constructor(private youtubeService: YoutubersService) {
     
    }
 
   ngOnInit() {
-    this.youtubers = this.youtubeService.getYouTubers(); 
-    
-  }
-
-  sanitize(url) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    from(this.youtubeService.getYouTubers()).subscribe(() => {
+      this.youtubers = this.youtubeService.getYouTubers();
+    });
   }
 
   goto(youtuber) {
     window.open(youtuber);
   }
 
-  favor(youtuber) {
-   console.log(youtuber);
-   youtuber = true;
-   console.log(youtuber);
-   return youtuber;
+  favor(element) {
+   element.innerHTML = 'favorite';
+   return element;
   }
 
+  savePlayer(player) {
+    this.player = player;
+    console.log('player instance', player);
+  }
+  onStateChange(event) {
+    console.log('player state', event.data);
+  }
 }

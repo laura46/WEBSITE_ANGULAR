@@ -15,17 +15,16 @@
         <mat-card-title class="title" [innerHtml]="yt.name"></mat-card-title>
         <mat-card-subtitle [innerHtml]="yt.channelName"></mat-card-subtitle>
       </mat-card-header>
-      <iframe width="420" height="315" [src]="sanitize(yt.linkVideo)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
+      <youtube-player width="420" height="315" [videoId]="yt.videoId" (ready)="savePlayer($event)" (change)="onStateChange($event)">
+      </youtube-player>
       <mat-card-content>
         <p class="description" [innerHtml]="yt.description">
         </p>
       </mat-card-content>
       <mat-card-actions fxLayout="row" fxLayoutAlign="space-between">
         <button  color="accent" mat-button (click)="goto(yt.linkChannel)">VISIT CHANNEL</button>
-        <button  mat-icon-button (click)="favor(yt.favorite)">
-          <mat-icon *ngIf="yt.favorite" color="primary">favorite</mat-icon>
-          <mat-icon *ngIf="!yt.favorite" color="primary">favorite_border</mat-icon>
+        <button  mat-icon-button (click)="favor($event.target)">
+          <mat-icon color="primary">favorite_border</mat-icon>
         </button>
       </mat-card-actions>
     </mat-card>
