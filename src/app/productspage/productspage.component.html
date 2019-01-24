@@ -1,3 +1,8 @@
-<div style="height:100%;">
-
+<div fxLayout="row wrap" fxLayoutGap="24px">
+    <mat-card *ngFor="let product of this.products">
+        <mat-card-header>
+            <mat-card-title [innerHtml]="product.title"></mat-card-title>
+        </mat-card-header>
+        <img class="product-image" [src]="product.img">
+    </mat-card>
 </div>
