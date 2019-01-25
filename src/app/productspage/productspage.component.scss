@@ -1,7 +1,6 @@
 @import '../../styles.scss';
 
 .cred {
-    color: $accent;
     padding: 6px;
 }
 
@@ -12,4 +11,12 @@
 
 .card-image {
     border-radius: 4px;
+}
+
+.card-title {
+    color: $accent;
+}
+
+.products-header {
+    color: $primary;
 }

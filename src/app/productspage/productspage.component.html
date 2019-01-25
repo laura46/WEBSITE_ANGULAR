@@ -1,16 +1,28 @@
-<div class="card-container" fxLayout="row wrap" fxLayoutGap="24px" fxLayoutAlign="center">
-    <mat-card *ngFor="let product of this.products">
-        <mat-card-header>
-            <mat-card-title [innerHtml]="product.title"></mat-card-title>
-        </mat-card-header>
-        <img class="card-image" [src]="product.img">
-        <mat-card-subtitle class="cred" [innerHtml]="product.cred"></mat-card-subtitle>
-        <mat-card-content>
-                <p [innerHtml]="product.desc"></p>
-              </mat-card-content>
-              <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-              </mat-card-actions>
-    </mat-card>
+<div fxLayout="column" fxLayoutGap="24px" fxLayoutAlign="start center">
+    <div fxLayout="column" fxLayoutAlign="start center">
+        <h2 class="products-header">These are some of the products that work for my hair.</h2>
+        <p>But just because it works for me does not mean it's a garantuee it will work for
+            you too. 
+        </p>
+        <p>Experiment with your hair and figure out what it needs by trying different
+            methods, products and approaches.
+        </p>
+    </div>
+    <div class="card-container" fxLayout="row wrap" fxLayoutGap="24px" fxLayoutAlign="center">
+            <mat-card *ngFor="let product of this.products">
+                <mat-card-header>
+                    <mat-card-title class="card-title" [innerHtml]="product.title"></mat-card-title>
+                </mat-card-header>
+                <img class="card-image" [src]="product.img">
+                <mat-card-subtitle class="cred"><a href="https://unsplash.com/" [innerHtml]="product.cred"></a></mat-card-subtitle>
+                <mat-card-content>
+                        <p style="max-width:240px;width:100%;min-height: 120px;height: 100%;" [innerHtml]="product.desc"></p>
+                      </mat-card-content>
+                      <mat-card-actions fxLayout="row" fxLayoutAlign="space-between">
+                        <button color="accent" mat-button (click)="goto(product.wiki)">GO TO WIKI</button>
+                        <button mat-icon-button (click)="goto(product.wiki)"><mat-icon color="primary">arrow_forward</mat-icon></button>
+                      </mat-card-actions>
+            </mat-card>
+        </div>
 </div>
+
