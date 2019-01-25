@@ -1,8 +1,16 @@
-<div fxLayout="row wrap" fxLayoutGap="24px">
+<div class="card-container" fxLayout="row wrap" fxLayoutGap="24px" fxLayoutAlign="center">
     <mat-card *ngFor="let product of this.products">
         <mat-card-header>
             <mat-card-title [innerHtml]="product.title"></mat-card-title>
         </mat-card-header>
-        <img class="product-image" [src]="product.img">
+        <img class="card-image" [src]="product.img">
+        <mat-card-subtitle class="cred" [innerHtml]="product.cred"></mat-card-subtitle>
+        <mat-card-content>
+                <p [innerHtml]="product.desc"></p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
     </mat-card>
 </div>
