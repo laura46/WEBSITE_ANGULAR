@@ -1,23 +1,21 @@
 <div fxLayout="column" fxLayoutGap="12px" fxLayoutAlign="start center" style="height:100%;">
     <h2 class="heading">Check yourself before you wreck yourself!</h2>
     <p class="check-intro">
-       Not all hair products consist of great ingredients unfortunately, some of the products can be really
-       damaging to your natural hair. Have a look in this ingredient finder to see if there are
-       any harmful ingredients in your product.</p>
-    <p class="check-intro">I made this list with the information on 
-       <a class="link-text" href="http://www.tightlycurly.com/ingredients/">this</a> website. Thankfully this gorgeous
-       lady went through the effort of assessing frequently used ingredients. She has categorized
-       them in three categories, ranging from good to bad.</p>
-    <p class="check-intro">I made a list of all the ingredients
-       she has marked as 'avoid'. Definitely go check out her website, as she has a lot more information
-       about the ingredients and why they would be good or bad.
+        This checker checks your ingredients. If your ingredient shows up in the search it's probably best to avoid it.
+    </p>
+    <p class="check-intro">The <a href="http://www.tightlycurly.com/ingredients/">TightlyCurly</a> website has categorized ingredients from good to avoid.
+        I put the ingredients to be avoided in this checker.
+    </p>
+    <p class="check-intro">
+        If you want to know more about why the ingredient should be avoided you can find out on the <a href="http://www.tightlycurly.com/ingredients/">TightlyCurly</a> website. 
+        Go check it out and educate yourself!
     </p>
     <br>  
     <mat-form-field class="finder" color="accent" >
         <mat-icon style="margin: 6px;" color='accent' matPrefix>search</mat-icon>
         <input #searchQuery (input)="searchIngredients($event.target.value)" style="margin: 2px;" color="accent" matInput type="text" placeholder="Harmful ingredient finder" >
     </mat-form-field>
-    <div *ngIf="dataSource.data.length > 0" class="search-output" style="max-width: 420px; width: 100%;">
+    <div *ngIf="dataSource.data.length > 0" class="search-output">
         <table class="ingredient-table" mat-table [dataSource]="dataSource">
             <ng-container matColumnDef="ingredient">
                 <th mat-header-cell *matHeaderCellDef class="table-header"> INGREDIENTS </th>

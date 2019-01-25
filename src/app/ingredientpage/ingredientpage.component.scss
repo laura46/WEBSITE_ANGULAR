@@ -19,10 +19,6 @@
     color: $primary;
 }
 
-.link-text {
-    color: $primary;
-}
-
 ::ng-deep .highlight-text {
     background-color: $primary;
 }
@@ -34,4 +30,10 @@
     width:100%;
     border-radius: 4px;
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+.search-output {
+    max-width: 420px;
+    width: 100%;
+    z-index: 1;
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import * as data from '../../assets/harmful-ingredients.json';
 import { MatTableDataSource } from '@angular/material';
+import { WINDOW } from '../app.module.js';
 
 
 @Component({
@@ -19,10 +20,10 @@ export class IngredientpageComponent implements OnInit {
   public resultsEmpty = true;
   public cleanInput: string;
 
-  constructor() { }
+  constructor(@Inject(WINDOW) private window: Window) { }
 
   ngOnInit() {
-
+    console.log(this.window);
   }
 
   searchIngredients(input: string) {

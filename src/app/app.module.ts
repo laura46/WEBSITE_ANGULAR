@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, InjectionToken } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
@@ -30,6 +30,9 @@ const appRoutes: Routes = [
   { path: 'products', component: ProductspageComponent }
 ]
 
+export const WINDOW = new InjectionToken('window',
+    { providedIn: 'root', factory: () => window }
+);
 
 @NgModule({
   declarations: [
