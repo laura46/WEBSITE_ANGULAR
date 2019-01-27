@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutGap="24px">
-  <button fxFlexOffset="24px" mat-icon-button color="primary" routerLink="/home" routerLinkActive='underline'><mat-icon>home</mat-icon></button>
-  <button mat-button style="font-family:Comfortaa;" color="accent" routerLink="/check">
+  <button fxFlexOffset="24px" mat-icon-button color="primary" routerLink="/home" ><mat-icon>home</mat-icon></button>
+  <button mat-button style="font-family:Comfortaa;" color="accent" routerLink="/check" routerLinkActive='underline'>
     <span *ngIf="this.lang == 'com'">INGREDIENT CHECK</span>
     <span *ngIf="this.lang == 'nl'">INGREDIËNTEN CHECK</span>
   </button>
