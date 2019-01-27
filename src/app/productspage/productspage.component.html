@@ -1,15 +1,15 @@
-<div fxLayout="column" fxLayoutGap="24px" fxLayoutAlign="start center">
+<div style="padding: 12px;" fxLayout="column" fxLayoutGap="24px" fxLayoutAlign="start center">
     <div fxLayout="column" fxLayoutAlign="start center">
         <h2 class="products-header">These are some of the products that work for my hair.</h2>
-        <p>But just because it works for me does not mean it's a garantuee it will work for
+        <p style="text-align:center;">But just because it works for me does not mean it's a garantuee it will work for
             you too. 
         </p>
-        <p>Experiment with your hair and figure out what it needs by trying different
+        <p style="text-align:center;">Experiment with your hair and figure out what it needs by trying different
             methods, products and approaches.
         </p>
     </div>
     <div class="card-container" fxLayout="row wrap" fxLayoutGap="24px" fxLayoutAlign="center">
-            <mat-card *ngFor="let product of this.products">
+            <mat-card *ngFor="let product of this.products" style="margin:24px !important;">
                 <mat-card-header>
                     <mat-card-title class="card-title" [innerHtml]="product.title"></mat-card-title>
                 </mat-card-header>

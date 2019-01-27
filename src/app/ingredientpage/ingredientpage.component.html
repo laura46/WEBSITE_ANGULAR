@@ -1,5 +1,5 @@
-<div fxLayout="column" fxLayoutGap="12px" fxLayoutAlign="start center" style="height:100%;">
-    <h2 class="heading">Check yourself before you wreck yourself!</h2>
+<div fxLayout="column" fxLayoutGap="12px" fxLayoutAlign="start center" style="height:100%;padding:24px;min-height: fit-content;">
+    <h2 [ngClass]="checkSize()" class="">Check yourself before you wreck yourself!</h2>
     <p class="check-intro">
         This checker checks your ingredients. If your ingredient shows up in the search it's probably best to avoid it.
     </p>
@@ -15,22 +15,15 @@
         <mat-icon style="margin: 6px;" color='accent' matPrefix>search</mat-icon>
         <input #searchQuery (input)="searchIngredients($event.target.value)" style="margin: 2px;" color="accent" matInput type="text" placeholder="Harmful ingredient finder" >
     </mat-form-field>
-    <div *ngIf="dataSource.data.length > 0" class="search-output">
-        <table class="ingredient-table" mat-table [dataSource]="dataSource">
-            <ng-container matColumnDef="ingredient">
-                <th mat-header-cell *matHeaderCellDef class="table-header"> INGREDIENTS </th>
-                <td style="padding-top: 30px;" fxLayout="row" mat-cell *matCellDef="let ingredient" [innerHtml]="ingredient | highlight: searchQuery.value "></td>
-            </ng-container>
-                
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-        </table>
-    </div>
-    <div *ngIf="this.searchBarEmpty">
-        <h3 class="search-div">Please type your ingredients in the searchbar above.</h3>
-    </div>
-    <div *ngIf="this.dataSource.data.length == 0 && !this.searchBarEmpty">
-        <h3 class="search-div">No harmful ingredients found! Your product <u>MIGHT</u> be safe.</h3>
+    <div class="result-container">
+        <mat-list *ngIf="this.searchResults.length > 0">
+            <h3 class="table-header" mat-subheader>INGREDIENTS</h3>
+            <mat-list-item *ngFor="let result of this.searchResults">
+                  <h4 mat-line [innerHtml]="result | highlight: searchQuery.value "></h4>
+            </mat-list-item>
+        </mat-list>
+        <h3 *ngIf="this.searchBarEmpty" class="search-div">Please type your ingredients in the searchbar above.</h3>
+        <h3 *ngIf="this.searchResults == 0 && !this.searchBarEmpty" class="search-div">No harmful ingredients found! Your product <u>MIGHT</u> be safe.</h3>
     </div>
 </div>
 

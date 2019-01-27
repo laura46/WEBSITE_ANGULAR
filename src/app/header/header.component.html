@@ -1,4 +1,12 @@
-<div fxLayout="row" fxLayoutGap="24px">
+<div *ngIf="this.app.screenSize == 'normal'" fxLayout="row" fxLayoutGap="24px">
   <h1 routerLink="/home" class="website-title" fxFlexOffset="24px" fxFlexAlign="start">Dutch Locks</h1>
   <dl-menubar fxFlexAlign="center"></dl-menubar>
+</div>
+<div style="margin-left:24px;" *ngIf="this.app.screenSize == 'small'" fxLayout="row" fxLayoutAlign="start center">
+  <dl-menu></dl-menu>
+  <h1 fxFlexFill style="text-align:center;"  fxFlexAlign="center" routerLink="/home" class="website-title-small">Dutch Locks</h1>
+</div>
+<div *ngIf="this.app.screenSize == 'tiny'" fxLayout="column" fxLayoutAlign="start center">
+  <h1 fxFlexFill style="text-align:center;" routerLink="/home" class="website-title">Dutch Locks</h1>
+  <dl-menu></dl-menu>
 </div>

@@ -1,0 +1,15 @@
+<div fxLayout="row">
+    <mat-icon [matMenuTriggerFor]="mobileMenu" color="accent" style="margin-right:24px;">menu</mat-icon>
+    <mat-menu #mobileMenu="matMenu">
+      <button mat-menu-item class="menu-button" routerLink="/check">
+        INGREDIENT CHECK
+      </button>
+      <button class="menu-button" mat-menu-item routerLink="/care">
+        HAIR CARE
+      </button>
+      <button class="menu-button" mat-menu-item routerLink="/products">
+        NATURAL PRODUCTS
+      </button>
+    </mat-menu>
+    <mat-icon routerLink="/home" color="accent">home</mat-icon>
+</div>

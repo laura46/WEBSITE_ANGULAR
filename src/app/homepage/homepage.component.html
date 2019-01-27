@@ -1,17 +1,21 @@
 <div fxLayout="row" style="height: 100%;">
-    <div fxLayout="column"  style="width: 100%;max-width: 900px;padding: 72px;">
-        <h2 class="heading" fxFlexOffset="24px">Learn from my mistakes!</h2>
-        <p>Growing up without the internet meant the <b><u>worst</u></b> time for my hair.<br>
-        Having no clue, I kept making things worse by mistreating my hair.<br><br>
-        These are my personal experiences and beliefs, I am not a professional.<br>
-        Maybe you can learn from the mistakes I made.  
+    <div fxLayout="column"  style="width: 100%;max-width: 900px;padding: 24px;">
+        <h2 [ngClass]="checkSize()" fxFlexOffset="24px">By curls for curls</h2>
+        <p>
+          Finding out what works for your hair can be tricky, especially if you have curls.
+        </p>
+        <p>
+          However it is not impossible, by trying out different natural products and methods you will most likely
+          find something that works for you.
+        </p>
+        <p>
+          These are some of the people and products that work for me. <mat-icon style="vertical-align: middle;" color="primary">favorite_border</mat-icon>
         </p> 
         <div fxLayout="column" fxLayoutGap="24px" fxFlexOffset="36px">
-          <button routerLink="/products" class="button-text" mat-raised-button >NATURAL PRODUCT OVERVIEW<mat-icon style="padding-left: 12px;" color="primary">arrow_forward</mat-icon></button>
-          <button routerLink="/care" class="button-text" mat-raised-button >WHAT I LEARNT ABOUT HAIRCARE<mat-icon style="padding-left: 12px;" color="primary">arrow_forward</mat-icon></button>
-          <button routerLink="/check" class="button-text" mat-raised-button>CHECK FOR HARMFUL INGREDIENTS<mat-icon style="padding-left: 12px;" color="primary">arrow_forward</mat-icon></button>
+          <button color="accent" routerLink="/products" class="button-text" mat-raised-button >NATURAL PRODUCT OVERVIEW<mat-icon style="padding-left: 12px;" >arrow_forward</mat-icon></button>
+          <button color="accent" routerLink="/care" class="button-text" mat-raised-button >WHERE I LEARN ABOUT HAIRCARE<mat-icon style="padding-left: 12px;" >arrow_forward</mat-icon></button>
+          <button color="accent" routerLink="/check" class="button-text" mat-raised-button>CHECK FOR HARMFUL INGREDIENTS<mat-icon style="padding-left: 12px;" >arrow_forward</mat-icon></button>
         </div>
-      </div>
-      
+      </div> 
 </div>
 

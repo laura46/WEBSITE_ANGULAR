@@ -1,11 +1,15 @@
 @import "../../styles.scss";
 .button-text {
-  color: $primary;
   width: fit-content;
 }
 
 .heading {
   color: $accent;
   font-size: -webkit-xxx-large;
+  margin-bottom: inherit;
+}
+
+.heading-small {
+  color: $accent;
   margin-bottom: inherit;
 }

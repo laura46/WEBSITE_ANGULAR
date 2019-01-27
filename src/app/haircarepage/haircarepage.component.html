@@ -1,21 +1,21 @@
-<div fxLayout="column" fxLayoutAlign="start center">
-  <p>
+<div style="padding:12px" fxLayout="column" fxLayoutAlign="start center">
+  <p style="text-align: center;">
     YouTube especially is a great place to learn from different people all over the world.
   </p>
-  <p>
+  <p style="text-align: center;">
     You can follow people that match your hairtype or draw inspiration from different hairtypes.
   </p>
-  <p>
+  <p style="text-align: center;">
     These are some of the channels I found very useful.
   </p>
-  <div fxLayout="row wrap" fxLayoutGap="24px" class="card-container">
-    <mat-card class="youtuber-card" *ngFor="let yt of this.youtubers">
+  <div fxLayoutAlign="center" fxLayout="row wrap" class="card-container">
+    <mat-card [ngClass]="setClass()" *ngFor="let yt of this.youtubers">
       <mat-card-header>
         <img mat-card-avatar [src]="yt.img">
         <mat-card-title class="title" [innerHtml]="yt.name"></mat-card-title>
         <mat-card-subtitle [innerHtml]="yt.channelName"></mat-card-subtitle>
       </mat-card-header>
-      <youtube-player width="420" height="315" [videoId]="yt.videoId" (ready)="savePlayer($event)" (change)="onStateChange($event)">
+      <youtube-player [width]="checkSize()" height="315" [videoId]="yt.videoId" (ready)="savePlayer($event)">
       </youtube-player>
       <mat-card-content>
         <p class="description" [innerHtml]="yt.description">

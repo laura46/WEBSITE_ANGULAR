@@ -1,7 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as data from '../../assets/harmful-ingredients.json';
-import { MatTableDataSource } from '@angular/material';
-import { WINDOW } from '../app.module.js';
+import { AppComponent } from '../app.component';
 
 
 @Component({
@@ -11,19 +10,16 @@ import { WINDOW } from '../app.module.js';
 })
 export class IngredientpageComponent implements OnInit {
 
-  dataSource = new MatTableDataSource;
- 
-  displayedColumns: string[] = ['ingredient'];
-
   public ingredients = data.ingredients;
+  public searchResults = [];
   public searchBarEmpty = true;
   public resultsEmpty = true;
   public cleanInput: string;
 
-  constructor(@Inject(WINDOW) private window: Window) { }
+  constructor(public app: AppComponent) { }
 
   ngOnInit() {
-    console.log(this.window);
+
   }
 
   searchIngredients(input: string) {
@@ -35,13 +31,19 @@ export class IngredientpageComponent implements OnInit {
     let results = this.ingredients.filter(i => i.toLowerCase().replace(/\s/g, "").indexOf(this.cleanInput) > -1);
     let shortList = results.slice(0, 5);
     
-    this.dataSource.data = shortList;
+    this.searchResults = shortList;
 
     if(input == ""){
       this.searchBarEmpty = true;
-      this.dataSource.data = [];
+      this.searchResults = [];
     }
   }
-
+  checkSize() {
+    if(this.app.screenSize == 'normal'){
+      return 'heading';
+    } else {
+      return 'heading-small';
+    }
+  }
 
 }

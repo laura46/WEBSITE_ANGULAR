@@ -6,6 +6,11 @@
     width: 100%;
     margin-bottom: 24px;
 }
+.youtuber-card-tiny {
+    max-width: 420px;
+    width: 100%;
+    margin-bottom: 24px;
+}
 .card-container {
     max-width: 1000px;
     width: 100%;
@@ -21,4 +26,8 @@
 
 .title {
     color: $primary;
+}
+
+:host .mat-card {
+    margin: 24px;
 }

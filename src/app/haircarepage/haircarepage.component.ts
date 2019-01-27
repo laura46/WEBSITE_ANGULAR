@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { YoutubersService } from '../youtubers.service';
 import { from } from 'rxjs';
+import { AppComponent } from '../app.component';
 
 
 @Component({
@@ -13,9 +14,9 @@ export class HaircarepageComponent implements OnInit {
   public youtubers;
   player: YT.Player;
 
-  constructor(private youtubeService: YoutubersService) {
+  constructor(private youtubeService: YoutubersService, public app: AppComponent) {
     
-   }
+  }
 
   ngOnInit() {
     from(this.youtubeService.getYouTubers()).subscribe(() => {
@@ -34,9 +35,26 @@ export class HaircarepageComponent implements OnInit {
 
   savePlayer(player) {
     this.player = player;
-    console.log('player instance', player);
   }
-  onStateChange(event) {
-    console.log('player state', event.data);
+
+  checkSize(){
+
+    if(window.innerWidth > 350 && window.innerWidth < 450) {
+      return 300;
+    }
+
+    if(this.app.screenSize == 'tiny') {
+      return 240;
+    } else {
+      return 420;
+    }
+  }
+
+  setClass() {
+    if(this.app.screenSize == 'tiny' || window.innerWidth < 430) {
+      return 'youtuber-card-tiny';
+    } else {
+      return 'youtuber-card';
+    }
   }
 }
