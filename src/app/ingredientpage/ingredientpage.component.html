@@ -15,9 +15,9 @@
             </mat-list-item>
         </mat-list>
         <h3 *ngIf="this.searchBarEmpty && this.lang == 'com'" class="search-div">Please type your ingredients in the searchbar above.</h3>
-        <h3 *ngIf="this.searchResults == 0 && !this.searchBarEmpty && this.lang == 'com'" class="search-div">No harmful ingredients found! Your product <u>MIGHT</u> be safe.</h3>
+        <h3 *ngIf="this.searchResults.length == 0 && !this.searchBarEmpty && this.lang == 'com'" class="search-div">No harmful ingredients found! Your product <u>MIGHT</u> be safe.</h3>
         <h3 *ngIf="this.searchBarEmpty && this.lang == 'nl'" class="search-div">Voer uw ingrediënten in.</h3>
-        <h3 *ngIf="this.searchResults == 0 && !this.searchBarEmpty && this.lang == 'nl'" class="search-div">Geen schadelijke ingrediënten gevonden! Jouw product is <u>waarschijnlijk</u> veilig.</h3>
+        <h3 *ngIf="this.searchResults.length == 0 && !this.searchBarEmpty && this.lang == 'nl'" class="search-div">Geen schadelijke ingrediënten gevonden! Jouw product is <u>waarschijnlijk</u> veilig.</h3>
     </div>
 </div>
 

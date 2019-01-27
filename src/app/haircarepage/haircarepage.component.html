@@ -3,6 +3,7 @@
   <div fxLayoutAlign="center" fxLayout="row wrap" class="card-container">
     <mat-card [ngClass]="setClass()" *ngFor="let yt of this.youtubers">
       <mat-card-header>
+        <!-- IMAGE -->
         <img mat-card-avatar [src]="yt.img">
         <mat-card-title class="title" [innerHtml]="yt.name"></mat-card-title>
         <mat-card-subtitle style="font-family:Comfortaa;" [innerHtml]="yt.channelName"></mat-card-subtitle>
