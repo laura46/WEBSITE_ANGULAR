@@ -1,15 +1,15 @@
 <div fxLayout="row">
     <mat-icon [matMenuTriggerFor]="mobileMenu" color="accent" style="margin-right:24px;">menu</mat-icon>
     <mat-menu #mobileMenu="matMenu">
-      <button mat-menu-item class="menu-button" routerLink="/check">
+      <button mat-menu-item class="menu-button" routerLink="/check" routerLinkActive="underline">
         <span *ngIf="this.lang == 'com'">INGREDIENT CHECK</span>
         <span *ngIf="this.lang == 'nl'">INGREDIËNTEN CHECK</span>
       </button>
-      <button class="menu-button" mat-menu-item routerLink="/care">
+      <button class="menu-button" mat-menu-item routerLink="/care" routerLinkActive="underline">
         <span *ngIf="this.lang == 'com'">HAIR CARE</span>
         <span *ngIf="this.lang == 'nl'">HAARVERZORGING</span>
       </button>
-      <button class="menu-button" mat-menu-item routerLink="/products">
+      <button class="menu-button" mat-menu-item routerLink="/products" routerLinkActive="underline">
         <span *ngIf="this.lang == 'com'">NATURAL PRODUCTS</span>
         <span *ngIf="this.lang == 'nl'">NATUURLIJKE PRODUCTEN</span>
       </button>
