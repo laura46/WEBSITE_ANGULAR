@@ -2,13 +2,16 @@
     <mat-icon [matMenuTriggerFor]="mobileMenu" color="accent" style="margin-right:24px;">menu</mat-icon>
     <mat-menu #mobileMenu="matMenu">
       <button mat-menu-item class="menu-button" routerLink="/check">
-        INGREDIENT CHECK
+        <span *ngIf="this.lang == 'com'">INGREDIENT CHECK</span>
+        <span *ngIf="this.lang == 'nl'">INGREDIËNTEN CHECK</span>
       </button>
       <button class="menu-button" mat-menu-item routerLink="/care">
-        HAIR CARE
+        <span *ngIf="this.lang == 'com'">HAIR CARE</span>
+        <span *ngIf="this.lang == 'nl'">HAARVERZORGING</span>
       </button>
       <button class="menu-button" mat-menu-item routerLink="/products">
-        NATURAL PRODUCTS
+        <span *ngIf="this.lang == 'com'">NATURAL PRODUCTS</span>
+        <span *ngIf="this.lang == 'nl'">NATUURLIJKE PRODUCTEN</span>
       </button>
     </mat-menu>
     <mat-icon routerLink="/home" color="accent">home</mat-icon>

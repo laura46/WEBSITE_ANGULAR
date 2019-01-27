@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { YoutubersService } from '../youtubers.service';
 import { from } from 'rxjs';
 import { AppComponent } from '../app.component';
+import { LanguageService } from '../language.service';
 
 
 @Component({
@@ -13,8 +14,9 @@ export class HaircarepageComponent implements OnInit {
 
   public youtubers;
   player: YT.Player;
+  public lang;
 
-  constructor(private youtubeService: YoutubersService, public app: AppComponent) {
+  constructor(public laguageService: LanguageService, private youtubeService: YoutubersService, public app: AppComponent) {
     
   }
 
@@ -22,6 +24,32 @@ export class HaircarepageComponent implements OnInit {
     from(this.youtubeService.getYouTubers()).subscribe(() => {
       this.youtubers = this.youtubeService.getYouTubers();
     });
+
+    this.lang = this.laguageService.getLanguage();
+  }
+
+  getIntro() {
+    if(this.lang == 'nl') {
+      return `<p>
+      YouTube is vooral een goede plek om te leren van veel verschillende mensen over de hele wereld.
+    </p>
+    <p>
+      Je kan ervoor kiezen om mensen te volgen die hetzelfde haartype als jou hebben of je kan inspiratie opdoen bij andere haartypes.
+    </p>
+    <p>
+      Dit zijn een paar van de kanalen waar ik persoonlijk veel aan heb gehad.
+    </p>`;
+    } else {
+      return `<p>
+      YouTube especially is a great place to learn from different people all over the world.
+    </p>
+    <p>
+      You can follow people that match your hairtype or draw inspiration from different hairtypes.
+    </p>
+    <p>
+      These are some of the channels I found very useful.
+    </p>`;
+    }
   }
 
   goto(youtuber) {

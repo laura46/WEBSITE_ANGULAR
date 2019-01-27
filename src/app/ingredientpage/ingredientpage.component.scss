@@ -1,10 +1,5 @@
 @import "../../styles.scss";
 
-.check-intro {
-    max-width: 1022px;
-    width: 100%;
-    text-align: center;
-}
 .finder {
     max-width: 420px;
     width: 100%;
@@ -35,4 +30,8 @@
 .result-container {
     max-width: 420px;
     width: 100%;
+}
+
+:host .mat-form-field {
+    font-family: Comfortaa;
 }

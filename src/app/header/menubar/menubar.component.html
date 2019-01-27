@@ -1,6 +1,15 @@
 <div fxLayout="row" fxLayoutGap="24px">
   <button fxFlexOffset="24px" mat-icon-button color="primary" routerLink="/home"><mat-icon>home</mat-icon></button>
-  <button mat-button color="accent" routerLink="/check">INGREDIENT CHECK</button>
-  <button mat-button color="accent" routerLink="/care">HAIR CARE</button>
-  <button mat-button color="accent" routerLink="/products">NATURAL PRODUCTS</button>
+  <button mat-button style="font-family:Comfortaa;" color="accent" routerLink="/check">
+    <span *ngIf="this.lang == 'com'">INGREDIENT CHECK</span>
+    <span *ngIf="this.lang == 'nl'">INGREDIËNTEN CHECK</span>
+  </button>
+  <button mat-button style="font-family:Comfortaa;" color="accent" routerLink="/care">
+    <span *ngIf="this.lang == 'com'">HAIR CARE</span>
+    <span *ngIf="this.lang == 'nl'">HAARVERZORGING</span>
+  </button>
+  <button mat-button style="font-family:Comfortaa;" color="accent" routerLink="/products">
+    <span *ngIf="this.lang == 'com'">NATURAL PRODUCTS</span>
+    <span *ngIf="this.lang == 'nl'">NATUURLIJKE PRODUCTEN</span>
+  </button>
 </div>

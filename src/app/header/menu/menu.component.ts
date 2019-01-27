@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from 'src/app/language.service';
 
 @Component({
   selector: 'dl-menu',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  public lang;
+
+  constructor(public languageService: LanguageService) { }
 
   ngOnInit() {
+    this.lang = this.languageService.getLanguage();
   }
 
 }
