@@ -1,4 +1,4 @@
-<div fxLayout="row" style="height: 100%;">
+<div fxLayout="row" style="">
     <div fxLayout="column"  style="width: 100%;max-width: 900px;padding: 24px;">
         <h2 [ngClass]="checkSize()" fxFlexOffset="24px">By curls for curls</h2>
         <p>
@@ -12,9 +12,21 @@
           These are some of the people and products that work for me. <mat-icon style="vertical-align: middle;" color="primary">favorite_border</mat-icon>
         </p> 
         <div fxLayout="column" fxLayoutGap="24px" fxFlexOffset="36px">
-          <button color="accent" routerLink="/products" class="button-text" mat-raised-button >NATURAL PRODUCT OVERVIEW<mat-icon style="padding-left: 12px;" >arrow_forward</mat-icon></button>
-          <button color="accent" routerLink="/care" class="button-text" mat-raised-button >WHERE I LEARN ABOUT HAIRCARE<mat-icon style="padding-left: 12px;" >arrow_forward</mat-icon></button>
-          <button color="accent" routerLink="/check" class="button-text" mat-raised-button>CHECK FOR HARMFUL INGREDIENTS<mat-icon style="padding-left: 12px;" >arrow_forward</mat-icon></button>
+          <button color="accent" routerLink="/products" class="button-text" mat-raised-button>
+            <span *ngIf="!this.app.screenSize == 'tiny'">NATURAL PRODUCT OVERVIEW</span>
+            <span *ngIf="this.app.screenSize == 'tiny'">PRODUCT OVERVIEW</span>
+            <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
+          </button>
+          <button color="accent" routerLink="/care" class="button-text" mat-raised-button>
+            <span *ngIf="!this.app.screenSize == 'tiny'">WHERE I LEARN ABOUT HAIRCARE</span>
+            <span *ngIf="this.app.screenSize == 'tiny'">HAIRCARE GUIDES</span>
+            <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
+          </button>
+          <button color="accent" routerLink="/check" class="button-text" mat-raised-button>
+            <span *ngIf="!this.app.screenSize == 'tiny'">CHECK FOR HARMFUL INGREDIENTS</span>
+            <span *ngIf="this.app.screenSize == 'tiny'">INGREDIENT CHECKER</span>
+            <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
+          </button>
         </div>
       </div> 
 </div>

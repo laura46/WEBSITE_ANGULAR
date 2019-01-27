@@ -37,24 +37,21 @@ export class HaircarepageComponent implements OnInit {
     this.player = player;
   }
 
-  checkSize(){
-
-    if(window.innerWidth > 350 && window.innerWidth < 450) {
-      return 300;
-    }
-
-    if(this.app.screenSize == 'tiny') {
+  checkSize(){  
+    if(window.innerWidth < 350) {
       return 240;
+    } else if(window.innerWidth > 349 && window.innerWidth < 450) {
+      return 300;
     } else {
       return 420;
     }
   }
 
   setClass() {
-    if(this.app.screenSize == 'tiny' || window.innerWidth < 430) {
-      return 'youtuber-card-tiny';
-    } else {
-      return 'youtuber-card';
-    }
+      if( window.innerWidth < 430) {
+        return 'youtuber-card-tiny';
+      } else {
+        return 'youtuber-card';
+      }
   }
 }

@@ -17,4 +17,6 @@ export class HomepageComponent {
       return 'heading-small';
     }
   }
+
+
 }
