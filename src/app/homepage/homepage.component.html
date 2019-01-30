@@ -5,27 +5,34 @@
           <mat-icon color='primary'>favorite_border</mat-icon>
       </div>
       <div [innerHtml]="getIntro()"></div>
-      <div fxLayout="column" fxLayoutGap="24px" fxFlexOffset="36px">
+      <div *ngIf="this.lang == 'com'" fxLayout="column" fxLayoutGap="24px" fxFlexOffset="36px">
         <button color="accent" routerLink="/care" class="button-text" mat-raised-button>
-          <span *ngIf="this.lang == 'com'">HAIRCARE GUIDES</span>
-          <span *ngIf="this.lang == 'nl'">HAARVERZORGING</span>
+          <span>HAIRCARE GUIDES</span>
           <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
         </button>
-
-          <button color="accent" routerLink="/products" class="button-text" mat-raised-button>
-            <span *ngIf="this.lang == 'com'">PRODUCT OVERVIEW</span>
-            <span *ngIf="this.lang == 'nl'">PRODUCT OVERZICHT</span>
-            <span></span>
-            <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
-          </button>
-
-          <button color="accent" routerLink="/check" class="button-text" mat-raised-button>
-            <span *ngIf="this.lang == 'com'">INGREDIENT CHECKER</span>
-            <span *ngIf="this.lang == 'nl'">INGREDIËNTEN CHECKER</span>
-            <span></span>
-            <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
-          </button>
-        </div>
-      </div> 
+        <button color="accent" routerLink="/products" class="button-text" mat-raised-button>
+          <span>PRODUCT OVERVIEW</span>
+          <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
+        </button>
+        <button color="accent" routerLink="/check" class="button-text" mat-raised-button>
+          <span>INGREDIENT CHECKER</span>
+          <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
+        </button>
+      </div>
+      <div *ngIf="this.lang == 'nl'" fxLayout="column" fxLayoutGap="24px" fxFlexOffset="36px">
+        <button color="accent" routerLink="/care" class="button-text" mat-raised-button>
+          <span >HAARVERZORGING</span>
+          <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
+        </button>
+        <button color="accent" routerLink="/products" class="button-text" mat-raised-button>
+          <span>PRODUCT OVERZICHT</span>
+          <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
+        </button>
+        <button color="accent" routerLink="/check" class="button-text" mat-raised-button>
+          <span>INGREDIËNTEN CHECKER</span>
+          <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div> 
 </div>
 

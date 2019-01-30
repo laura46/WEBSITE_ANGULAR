@@ -1,12 +1,12 @@
 <div fxLayout="column" fxLayoutGap="12px" fxLayoutAlign="start center" style="height:100%;padding:24px;min-height: fit-content;">
-    <h2 [ngClass]="checkSize()" [innerHtml]="getTitle()"></h2>
-    <div [innerHtml]="getIntro()" style="max-width: 1022px;width: 100%;text-align: center;"></div>
+    <h2 fxFlexOrder.xs="1" [ngClass]="checkSize()" [innerHtml]="getTitle()"></h2>
+    <div fxFlexOrder.xs="4" [innerHtml]="getIntro()" style="max-width: 1022px;width: 100%;text-align: center;"></div>
     <br>  
-    <mat-form-field class="finder" color="accent" >
+    <mat-form-field fxFlexOrder.xs="2" class="finder" color="accent" >
         <mat-icon style="margin: 6px;" color='accent' matPrefix>search</mat-icon>
         <input #searchQuery (input)="searchIngredients($event.target.value)" style="margin: 2px;" color="accent" matInput type="text" [placeholder]="getPlaceHolder()">
     </mat-form-field>
-    <div class="result-container">
+    <div fxFlexOrder.xs="3" class="result-container">
         <mat-list *ngIf="this.searchResults.length > 0">
             <h3 *ngIf="this.lang == 'com'" class="table-header" mat-subheader>INGREDIENTS</h3>
             <h3 *ngIf="this.lang == 'nl'" class="table-header" mat-subheader>INGREDIËNTEN</h3>
