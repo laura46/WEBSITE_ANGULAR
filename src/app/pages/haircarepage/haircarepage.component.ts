@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { YoutubersService } from '../youtubers.service';
+import { YoutubersService } from '../../services/youtubers.service';
 import { from } from 'rxjs';
-import { AppComponent } from '../app.component';
-import { LanguageService } from '../language.service';
+import { AppComponent } from '../../main/app.component';
+import { LanguageService } from '../../services/language.service';
 
 
 @Component({

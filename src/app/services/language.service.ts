@@ -14,5 +14,12 @@ export class LanguageService {
     if(window.location.href.indexOf('.com') !== -1){
       return 'com';
     } 
+    if(window.location.href.indexOf('.net') !== -1){
+      return 'com';
+    } 
+    if(window.location.hostname == 'localhost') {
+      return 'com';
+    }
+
   }
 }

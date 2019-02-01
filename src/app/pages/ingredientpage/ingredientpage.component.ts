@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from '../../assets/harmful-ingredients.json';
-import { AppComponent } from '../app.component';
-import { LanguageService } from '../language.service.js';
+import * as data from 'src/assets/harmful-ingredients.json';
+import { AppComponent } from '../../main/app.component';
+import { LanguageService } from '../../services/language.service.js';
 
 
 @Component({

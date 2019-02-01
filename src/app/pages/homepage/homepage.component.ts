@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component';
-import { LanguageService } from '../language.service';
+import { AppComponent } from '../../main/app.component';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'dl-homepage',
