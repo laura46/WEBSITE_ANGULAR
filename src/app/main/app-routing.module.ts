@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { IngredientpageComponent } from './ingredientpage/ingredientpage.component';
-import { HaircarepageComponent } from './haircarepage/haircarepage.component';
-import { ProductspageComponent } from './productspage/productspage.component';
+import { HomepageComponent } from '../pages/homepage/homepage.component';
+import { IngredientpageComponent } from '../pages/ingredientpage/ingredientpage.component';
+import { HaircarepageComponent } from '../pages/haircarepage/haircarepage.component';
+import { ProductspageComponent } from '../pages/productspage/productspage.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },

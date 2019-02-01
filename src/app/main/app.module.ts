@@ -10,15 +10,15 @@ import { MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { MenubarComponent } from './header/menubar/menubar.component';
-import { IngredientpageComponent } from './ingredientpage/ingredientpage.component';
-import { HaircarepageComponent } from './haircarepage/haircarepage.component';
-import { ProductspageComponent } from './productspage/productspage.component';
-import { HighlightPipe } from './ingredientpage/highlight.pipe';
-import { MenuComponent } from './header/menu/menu.component';
+import { HomepageComponent } from '../pages/homepage/homepage.component';
+import { HeaderComponent } from '../pages/page/header/header.component';
+import { FooterComponent } from '../pages/page/footer/footer.component';
+import { MenubarComponent } from '../pages/page/header/menubar/menubar.component';
+import { IngredientpageComponent } from '../pages/ingredientpage/ingredientpage.component';
+import { HaircarepageComponent } from '../pages/haircarepage/haircarepage.component';
+import { ProductspageComponent } from '../pages/productspage/productspage.component';
+import { HighlightPipe } from '../pages/ingredientpage/highlight.pipe';
+import { MenuComponent } from '../pages/page/header/menu/menu.component';
 
 
 @NgModule({
