@@ -6,7 +6,7 @@ import * as express from 'express';
 
 import { join } from 'path';
 import { readFileSync } from 'fs';
-import { AppServerModuleNgFactory } from '../../../dist/ngfactory/src/app/app-server.module.ngfactory';
+import { AppServerModuleNgFactory } from '../dist/ngfactory/src/app/main/app-server.module.ngfactory';
 
 enableProdMode()
 

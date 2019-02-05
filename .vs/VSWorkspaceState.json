@@ -3,10 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\main",
     "\\src\\app\\pages",
-    "\\src\\app\\pages\\ingredientpage",
-    "\\src\\app\\services"
+    "\\src\\app\\pages\\haircarepage",
+    "\\src\\app\\pages\\productspage",
+    "\\src\\app\\services",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\pages\\ingredientpage\\ingredientpage.component.ts",
+  "SelectedNode": "\\tsconfig.json",
   "PreviewInSolutionExplorer": false
 }

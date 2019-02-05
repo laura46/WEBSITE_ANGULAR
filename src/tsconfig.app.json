@@ -5,8 +5,8 @@
     "types": []
   },
   "exclude": [
+    "server.ts",
     "test.ts",
-    "**/*.spec.ts",
-    "server.ts"
+    "**/*.spec.ts"
   ]
 }
