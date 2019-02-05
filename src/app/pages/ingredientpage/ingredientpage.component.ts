@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as data from 'src/assets/harmful-ingredients.json';
 import { AppComponent } from '../../main/app.component';
 import { LanguageService } from '../../services/language.service.js';
+import { Window } from 'selenium-webdriver';
 
 
 @Component({
@@ -47,6 +48,8 @@ export class IngredientpageComponent implements OnInit {
       this.searchBarEmpty = true;
       this.searchResults = [];
     }
+
+    document.getElementById('resultDiv').scrollIntoView();
   }
   checkSize() {
     if(this.app.screenSize == 'normal'){
@@ -82,6 +85,10 @@ export class IngredientpageComponent implements OnInit {
               <p class="check-intro">If you want to know more about why the ingredient should be avoided you can find out on the <a href="http://www.tightlycurly.com/ingredients/">TightlyCurly</a> website. 
               Go check it out and educate yourself!</p>`;
     }
+  }
+
+  google(result) {
+    window.open(`https://www.google.com/search?q=${result}`);
   }
 
 }

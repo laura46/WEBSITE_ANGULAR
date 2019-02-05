@@ -18,7 +18,7 @@ export class LanguageService {
       return 'com';
     } 
     if(window.location.hostname == 'localhost') {
-      return 'com';
+      return 'nl';
     }
 
   }
