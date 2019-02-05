@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { LanguageService } from '../../services/language.service';
 import * as data from 'src/assets/products.json';
 
@@ -13,7 +14,10 @@ export class ProductspageComponent implements OnInit {
   //public producten = data.producten;
 
   public lang;
-  constructor(public languageService: LanguageService) { }
+  constructor(public languageService: LanguageService, meta: Meta, title: Title) {
+    title.setTitle('This is the products page');
+    meta.addTag({ name: 'description', content: 'This is the meta description for the product page' });
+  }
 
   ngOnInit() {
     this.lang = this.languageService.getLanguage();
