@@ -3,10 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\pages",
-    "\\src\\app\\pages\\ingredientpage",
-    "\\src\\app\\services"
+    "\\src\\app\\main"
   ],
-  "SelectedNode": "\\src\\app\\pages\\ingredientpage\\ingredientpage.component.ts",
+  "SelectedNode": "\\src\\app\\main\\app-routing.module.ts",
   "PreviewInSolutionExplorer": false
 }
