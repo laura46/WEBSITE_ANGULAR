@@ -18,6 +18,10 @@
       "es2018",
       "dom"
     ],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+  },
+  "angularCompilerOptions": {
+    "genDir": "./dist/ngfactory",
+    "entryModule": "./src/app/main/app.module#AppModule"
   }
 }

@@ -6,12 +6,10 @@
         <mat-icon style="margin: 6px;" color='accent' matPrefix>search</mat-icon>
         <input #searchQuery (input)="searchIngredients($event.target.value)" style="margin: 2px;" color="accent" matInput type="text" [placeholder]="getPlaceHolder()">
     </mat-form-field>
-    <div fxFlexOrder.xs="3" class="result-container">
-        <mat-list *ngIf="this.searchResults.length > 0">
-            <h3 *ngIf="this.lang == 'com'" class="table-header" mat-subheader>INGREDIENTS</h3>
-            <h3 *ngIf="this.lang == 'nl'" class="table-header" mat-subheader>INGREDIËNTEN</h3>
-            <mat-list-item *ngFor="let result of this.searchResults">
-                  <h4 mat-line [innerHtml]="result | highlight: searchQuery.value "></h4>
+    <div fxFlexOrder.xs="3" class="result-container" id="resultDiv">
+        <mat-list class="ingredient-list" *ngIf="this.searchResults.length > 0">
+            <mat-list-item style="cursor:pointer;border-bottom: solid 1px lightgrey;" *ngFor="let result of this.searchResults">
+                  <h4 mat-line (click)="google(result);" [innerHtml]="result | highlight: searchQuery.value "></h4>
             </mat-list-item>
         </mat-list>
         <h3 *ngIf="this.searchBarEmpty && this.lang == 'com'" class="search-div">Please type your ingredients in the searchbar above.</h3>

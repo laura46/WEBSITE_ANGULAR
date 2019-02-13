@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { YoutubePlayerModule } from 'ngx-youtube-player';
 
-import { MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule,
+import { MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule, MatExpansionModule,
   MatTableModule, MatCardModule, MatTooltipModule, MatListModule, MatMenuModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,12 +35,12 @@ import { MenuComponent } from '../pages/page/header/menu/menu.component';
     MenuComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'dutchlocks' }),
     AppRoutingModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatButtonModule, MatToolbarModule, MatIconModule,MatInputModule,MatTableModule,
-    MatTooltipModule, MatCardModule, MatListModule, MatMenuModule,
+    MatTooltipModule, MatCardModule, MatListModule, MatMenuModule, MatExpansionModule,
     YoutubePlayerModule
   ],
   providers: [],
