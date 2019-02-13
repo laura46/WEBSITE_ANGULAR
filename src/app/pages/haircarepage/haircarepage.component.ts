@@ -16,9 +16,7 @@ export class HaircarepageComponent implements OnInit {
   player: YT.Player;
   public lang;
 
-  constructor(public laguageService: LanguageService, private youtubeService: YoutubersService, public app: AppComponent) {
-    
-  }
+  constructor(public laguageService: LanguageService, private youtubeService: YoutubersService, public app: AppComponent) {}
 
   ngOnInit() {
     from(this.youtubeService.getYouTubers()).subscribe(() => {
