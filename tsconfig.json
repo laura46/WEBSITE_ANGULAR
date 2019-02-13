@@ -22,6 +22,6 @@
   },
   "angularCompilerOptions": {
     "genDir": "./dist/ngfactory",
-    "entryModule": "./src/app/main/app.module#AppModule"
+    "entryModule": "./app/main/app.module#AppModule"
   }
 }
