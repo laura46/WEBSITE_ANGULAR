@@ -13,6 +13,8 @@ const routes: Routes = [
   { path: 'products', component: ProductspageComponent }
 ];
 
+//comment
+
 @NgModule({
   imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
