@@ -35,7 +35,7 @@ import { MenuComponent } from '../pages/page/header/menu/menu.component';
     MenuComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'DL'}),
     AppRoutingModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
