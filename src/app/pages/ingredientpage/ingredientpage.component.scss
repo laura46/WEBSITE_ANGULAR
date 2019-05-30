@@ -9,12 +9,11 @@
     font-size: -webkit-xxx-large;
     color: $accent;
     text-align: center;
+    &-small {
+        color: $accent;
+        text-align: center;
+    }
 }
-.heading-small {
-    color: $accent;
-    text-align: center;
-}
-
 .search-div {
     color: $primary;
     text-align: center;

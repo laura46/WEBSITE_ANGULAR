@@ -13,10 +13,15 @@ import { HeaderComponent } from '../pages/page/header/header.component';
 import { FooterComponent } from '../pages/page/footer/footer.component';
 import { MenubarComponent } from '../pages/page/header/menubar/menubar.component';
 import { IngredientpageComponent } from '../pages/ingredientpage/ingredientpage.component';
-import { HaircarepageComponent } from '../pages/haircarepage/haircarepage.component';
-import { ProductspageComponent } from '../pages/productspage/productspage.component';
 import { HighlightPipe } from '../pages/ingredientpage/highlight.pipe';
 import { MenuComponent } from '../pages/page/header/menu/menu.component';
+import { SideCurlsComponent } from '../pages/homepage/side-curls/side-curls.component';
+import { LowlightLeftComponent } from '../elements/curls/lowlight-left';
+import { LowlightRightComponent } from '../elements/curls/lowlight-right';
+import { HighlightLeftComponent } from '../elements/curls/highlight-left';
+import { HighlightRightComponent } from '../elements/curls/highlight-right';
+import { StretchLeftComponent } from '../elements/curls/stretch-left';
+import { StretchRightComponent } from '../elements/curls/stretch-right';
 
 
 @NgModule({
@@ -27,10 +32,15 @@ import { MenuComponent } from '../pages/page/header/menu/menu.component';
     FooterComponent,
     MenubarComponent,
     IngredientpageComponent,
-    HaircarepageComponent,
-    ProductspageComponent,
     HighlightPipe,
-    MenuComponent
+    MenuComponent,
+    SideCurlsComponent,
+    LowlightLeftComponent,
+    LowlightRightComponent,
+    HighlightLeftComponent,
+    HighlightRightComponent,
+    StretchLeftComponent,
+    StretchRightComponent
   ],
   imports: [
     BrowserModule,

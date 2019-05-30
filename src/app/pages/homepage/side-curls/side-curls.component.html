@@ -1,0 +1,51 @@
+<div class="curl-container" >
+
+    <dl-lowlight-left class="overlay four"></dl-lowlight-left>
+    <dl-stretch-left *ngIf="stretch.so4" class="stretch-overlay four" (mouseleave)="curlHoverEffect('so4')"></dl-stretch-left>
+
+    <dl-highlight-right class="overlay three"></dl-highlight-right>
+    <dl-stretch-right *ngIf="stretch.so3" class="stretch-overlay three" (mouseleave)="curlHoverEffect('so3')"></dl-stretch-right>
+
+    <dl-lowlight-right class="overlay two"></dl-lowlight-right>
+    <dl-stretch-right *ngIf="stretch.so2" class="stretch-overlay two" (mouseleave)="curlHoverEffect('so2')"></dl-stretch-right>
+
+    <dl-highlight-left class="overlay one"></dl-highlight-left>
+    <dl-stretch-left *ngIf="stretch.so1" class="stretch-overlay one" (mouseleave)="curlHoverEffect('so1')"></dl-stretch-left>
+
+
+    <dl-highlight-right class="right six"></dl-highlight-right>
+    <dl-stretch-right *ngIf="stretch.sr6" class="stretch-right six" (mouseleave)="curlHoverEffect('sr6')"></dl-stretch-right>
+
+    <dl-lowlight-left class="left six"></dl-lowlight-left>
+    <dl-stretch-left *ngIf="stretch.sl6" class="stretch-left six" (mouseleave)="curlHoverEffect('sl6')"></dl-stretch-left>
+
+    <dl-lowlight-right class="right five"></dl-lowlight-right>
+    <dl-stretch-right *ngIf="stretch.sr5" class="stretch-right five" (mouseleave)="curlHoverEffect('sr5')"></dl-stretch-right>
+
+    <dl-highlight-left class="left five"></dl-highlight-left>
+    <dl-stretch-left *ngIf="stretch.sl5" class="stretch-left five" (mouseleave)="curlHoverEffect('sl5')"></dl-stretch-left>
+
+    <dl-highlight-right class="right four"></dl-highlight-right>
+    <dl-stretch-right *ngIf="stretch.sr4" class="stretch-right four" (mouseleave)="curlHoverEffect('sr4')"></dl-stretch-right>
+
+    <dl-lowlight-left class="left four"></dl-lowlight-left>
+    <dl-stretch-left *ngIf="stretch.sl4" class="stretch-left four" (mouseleave)="curlHoverEffect('sl4')"></dl-stretch-left>
+
+    <dl-lowlight-right class="right three"></dl-lowlight-right>
+    <dl-stretch-right *ngIf="stretch.sr3" class="stretch-right three" (mouseleave)="curlHoverEffect('sr3')"></dl-stretch-right>
+
+    <dl-highlight-left class="left three"></dl-highlight-left>
+    <dl-stretch-left *ngIf="stretch.sl3" class="stretch-left three" (mouseleave)="curlHoverEffect('sl3')"></dl-stretch-left>
+
+    <dl-highlight-right class="right two"></dl-highlight-right>
+    <dl-stretch-right *ngIf="stretch.sr2" class="stretch-right two" (mouseleave)="curlHoverEffect('sr2')"></dl-stretch-right>
+
+    <dl-lowlight-left class="left two"></dl-lowlight-left>
+    <dl-stretch-left *ngIf="stretch.sl2" class="stretch-left two" (mouseleave)="curlHoverEffect('sl2')"></dl-stretch-left>
+
+    <dl-highlight-right class="right one"></dl-highlight-right>
+    <dl-stretch-right *ngIf="stretch.sr1" class="stretch-right one" (mouseleave)="curlHoverEffect('sr1')"></dl-stretch-right>
+
+    <dl-lowlight-left *ngIf="!stretch.sl1" class="left one" (mouseenter)="curlHoverEffect('sl1')"></dl-lowlight-left>
+    <dl-stretch-left *ngIf="stretch.sl1" class="stretch-left one" (mouseleave)="curlHoverEffect('sl1')"></dl-stretch-left>
+</div>

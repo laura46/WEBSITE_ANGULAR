@@ -1,15 +1,30 @@
 @import "../../../styles.scss";
 .button-text {
   width: fit-content;
+  font-family: Comfortaa;
+  color: $accent;
+  font-size: 18px;
 }
 
 .heading {
   color: $accent;
   font-size: -webkit-xxx-large;
   margin-bottom: inherit;
+  &-small {
+    color: $accent;
+    margin-bottom: inherit;
+  }
 }
 
-.heading-small {
-  color: $accent;
-  margin-bottom: inherit;
+.container {
+  height:100%;
+  margin-bottom:24px;
+  &.mobile {
+    overflow:scroll;
+  }
 }
+
+.intro-text {
+  color: white;
+}
+

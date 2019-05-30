@@ -1,38 +1,25 @@
-<div fxLayout="row" style="height:100%;">
+<div fxLayout="row" [ngClass]="checkWindow()">
     <div fxLayout="column"  style="width: 100%;max-width: 900px;padding: 24px;">
       <div fxLayout="row" fxLayoutGap="24px" fxLayoutAlign="start center">
           <h2 [ngClass]="checkSize()" [innerHtml]="getTitle()"></h2> 
           <mat-icon color='primary'>favorite_border</mat-icon>
       </div>
-      <div [innerHtml]="getIntro()"></div>
+      <div class="intro-text" [innerHtml]="getIntro()"></div>
       <div *ngIf="this.lang == 'com'" fxLayout="column" fxLayoutGap="24px" fxFlexOffset="36px">
-        <button color="accent" routerLink="/care" class="button-text" mat-raised-button>
-          <span>HAIRCARE GUIDES</span>
-          <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
-        </button>
-        <button color="accent" routerLink="/products" class="button-text" mat-raised-button>
-          <span>PRODUCT OVERVIEW</span>
-          <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
-        </button>
-        <button color="accent" routerLink="/check" class="button-text" mat-raised-button>
+        <button routerLink="/check" class="button-text dl-button" mat-button>
           <span>INGREDIENT CHECKER</span>
           <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
         </button>
       </div>
       <div *ngIf="this.lang == 'nl'" fxLayout="column" fxLayoutGap="24px" fxFlexOffset="36px">
-        <button color="accent" routerLink="/care" class="button-text" mat-raised-button>
-          <span >HAARVERZORGING</span>
-          <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
-        </button>
-        <button color="accent" routerLink="/products" class="button-text" mat-raised-button>
-          <span>PRODUCT OVERZICHT</span>
-          <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
-        </button>
-        <button color="accent" routerLink="/check" class="button-text" mat-raised-button>
-          <span>INGREDIËNTEN CHECKER</span>
+        <button routerLink="/check" class="button-text dl-button" mat-button>
+          <span class="button-text">INGREDIËNTEN CHECKER</span>
           <mat-icon style="padding-left:12px;">arrow_forward</mat-icon>
         </button>
       </div>
     </div> 
+    <div fxLayout="column">
+      <dl-side-curls></dl-side-curls>
+    </div>
 </div>
 

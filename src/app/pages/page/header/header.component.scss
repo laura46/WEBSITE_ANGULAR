@@ -2,11 +2,10 @@
 
 .website-title {
     cursor: pointer;
-    color: $primary;
-}
-
-.website-title-small {
-    cursor: pointer;
-    color: $primary;
-    min-width: auto !important;
+    color: $accent;
+    &-small {
+        cursor: pointer;
+        color: $accent;
+        min-width: auto !important;
+    }
 }

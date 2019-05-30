@@ -25,6 +25,14 @@ export class HomepageComponent implements OnInit {
     }
   }
 
+  checkWindow(){
+    if(this.app.screenSize == 'normal') {
+      return 'container';
+    } else {
+      return 'container mobile'; 
+    }
+  }
+
   getTitle() {
     if(this.lang == 'nl'){
       return 'Voor krullen door krullen'

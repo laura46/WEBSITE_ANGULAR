@@ -1,0 +1,176 @@
+.curl-container {
+    position: relative;
+    width: 800px;
+    height: 100vh;
+}
+.stretch {
+    position: absolute;
+    &-left {
+        top: -80px;
+        &.one {
+        height: 100vh;
+        width: 203px;
+        right: 0;
+        z-index: 2;
+        }
+        &.two {
+            z-index: 9;
+        }
+        &.three {
+            z-index: 12;
+        }
+        &.four {
+            z-index: 8;
+        }
+        &.five {
+            z-index: 5;
+        }
+        &.six {
+            z-index: 11;
+        }
+    }
+    &-right {
+        top: -80px;
+        position: absolute;
+        &.one {
+            height: 100vh;
+            width: 203px;
+            right: 0;
+            z-index: 7;
+            }
+            &.two {
+                z-index: 4;
+            }
+            &.three {
+                z-index: 10;
+            }
+            &.four {
+                z-index: 3;
+            }
+            &.five {
+                z-index: 1;
+            }
+            &.six {
+                z-index: 6;
+            }
+    }
+    &-overlay {
+        top: -80px;
+        position: absolute;
+        &.one {
+            height: 100vh;
+            width: 203px;
+            right: 0;
+            z-index: 16;
+            }
+            &.two {
+                z-index: 14;
+            }
+            &.three {
+                z-index: 13;
+            }
+            &.four {
+                z-index: 15;
+            }
+    }
+}
+.overlay {
+    position: absolute;
+    max-width: 132px;
+    width: auto;
+    top: -80px;
+    &.one {
+        height: 80vh;
+        right: 77px;
+        z-index: 16;
+    }
+    &.two {
+        height: 60vh;
+        right: 220px;
+        z-index: 14;
+    }
+    &.three {
+        right: 295px;
+        height: 50vh;
+        z-index: 13;
+    }
+    &.four {
+        height: 40vh;
+        right: 369px;
+        z-index: 15;
+    }
+}
+
+.left {
+    position: absolute;
+    max-width: 132px;
+    width: auto;
+    top: -80px;
+    &.one {
+        height: 100vh;
+        right: 0;
+        z-index:2;
+    }
+    &.two {
+        right: 126px;
+        height: 90vh;
+        z-index: 9;
+    }
+    &.three {
+        height: 80vh;
+        right: 225px;
+        z-index: 12;    
+    }
+    &.four {
+        height: 70vh;
+        right: 309px;
+        z-index: 8;
+    }
+    &.five {
+        height: 62vh;
+        right: 389px;
+        z-index: 5;
+    }
+    &.six {
+        height: 54vh;
+        right: 452px;
+        z-index: 11;
+    }
+}
+
+.right {
+    position: absolute;
+    max-width: 132px;
+    width: auto;
+    top: -80px;
+    &.one {
+        height: 100vh;
+        right: 28px;
+        z-index: 7;
+    }
+    &.two {
+        height: 90vh;
+        right: 152px;
+        z-index: 4;
+    }
+    &.three {
+        height: 80vh;
+        right: 276px;
+        z-index: 10;
+    }
+    &.four {
+        height: 70vh;
+        right: 329px; 
+        z-index: 3;   
+    }
+    &.five {
+        height: 62vh;
+        right: 435px;
+        z-index: 1;    
+    }
+    &.six {
+        height: 54vh;
+        right: 468px;
+        z-index: 6;
+    }
+}

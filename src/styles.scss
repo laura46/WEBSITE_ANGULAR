@@ -12,8 +12,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$DL-primary: mat-palette($mat-pink, 200);
-$DL-accent: mat-palette($mat-teal, 600, 100, 900);
+$DL-primary: mat-palette($mat-grey, 600);
+$DL-accent: mat-palette($mat-amber, A100, A100, A100);
 
 // The warn palette is optional (defaults to red).
 $DL-warn: mat-palette($mat-deep-orange);
@@ -36,6 +36,7 @@ $warn: mat-color($DL-warn);
 
 html, body { 
     height: 100%; 
+    background-color: $primary;
 }
 body { 
     margin: 0; 
@@ -45,6 +46,8 @@ a {
     color: $primary;
 }
 
-:host .button-text {
-    font-family: Comfortaa;
+.dl-button {
+    border: 2px solid $accent;
+    background-color: transparent;
+    border-radius: 60px;
 }
