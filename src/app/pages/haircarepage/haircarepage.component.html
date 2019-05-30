@@ -8,8 +8,7 @@
         <mat-card-title class="title" [innerHtml]="yt.name"></mat-card-title>
         <mat-card-subtitle style="font-family:Comfortaa;" [innerHtml]="yt.channelName"></mat-card-subtitle>
       </mat-card-header>
-      <youtube-player [width]="checkSize()" height="315" [videoId]="yt.videoId" (ready)="savePlayer($event)">
-      </youtube-player>
+
       <mat-card-content>
         <p class="description" [innerHtml]="yt.description">
         </p>

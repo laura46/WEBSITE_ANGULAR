@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { YoutubePlayerModule } from 'ngx-youtube-player';
-
 import { MatButtonModule, MatToolbarModule, MatIconModule, MatInputModule, MatExpansionModule,
   MatTableModule, MatCardModule, MatTooltipModule, MatListModule, MatMenuModule } from '@angular/material';
 
@@ -40,8 +38,7 @@ import { MenuComponent } from '../pages/page/header/menu/menu.component';
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatButtonModule, MatToolbarModule, MatIconModule,MatInputModule,MatTableModule,
-    MatTooltipModule, MatCardModule, MatListModule, MatMenuModule, MatExpansionModule,
-    YoutubePlayerModule
+    MatTooltipModule, MatCardModule, MatListModule, MatMenuModule, MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

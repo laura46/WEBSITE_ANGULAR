@@ -13,7 +13,6 @@ import { LanguageService } from '../../services/language.service';
 export class HaircarepageComponent implements OnInit {
 
   public youtubers;
-  player: YT.Player;
   public lang;
 
   constructor(public laguageService: LanguageService, private youtubeService: YoutubersService, public app: AppComponent) {}
@@ -59,9 +58,6 @@ export class HaircarepageComponent implements OnInit {
    return element;
   }
 
-  savePlayer(player) {
-    this.player = player;
-  }
 
   checkSize(){  
     if(window.innerWidth < 350) {
