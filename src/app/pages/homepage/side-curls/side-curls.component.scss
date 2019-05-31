@@ -7,70 +7,86 @@
     &-left {
         position: absolute;
         top: -80px;
+        max-width: 203px;
+        width:auto;
+        z-index: 0;
         &.one {
-        height: 100vh;
-        width: 203px;
-        right: 0;
-        z-index: 2;
+            height: 100vh;
+            right: 0;
         }
         &.two {
-            z-index: 9;
+            height: 90vh;
+            right: 107px;
         }
         &.three {
-            z-index: 12;
+            height:80vh;
+            right: 191px;
         }
         &.four {
-            z-index: 8;
+            height:70vh;
+            right: 269px;
         }
         &.five {
-            z-index: 5;
+            height:62vh;
+            right: 357px;
         }
         &.six {
-            z-index: 11;
+            height:54vh;
+            right: 419px;
         }
     }
     &-right {
         top: -80px;
         position: absolute;
+        max-width: 203px;
+        width:auto;
+        z-index: 0;
         &.one {
             height: 100vh;
-            width: 203px;
             right: 0;
-            z-index: 7;
             }
             &.two {
-                z-index: 4;
+                height:90vh;
+                right:110px;
             }
             &.three {
-                z-index: 10;
+                height:80vh;
+                right: 201px;
             }
             &.four {
-                z-index: 3;
+                height:70vh;
+                right: 285px;
             }
             &.five {
-                z-index: 1;
+                height:62vh;
+                right:367px;
             }
             &.six {
-                z-index: 6;
+                height:54vh;
+                right: 430px;
             }
     }
     &-overlay {
         top: -80px;
         position: absolute;
+        max-width: 203px;
+        width:auto;
+        z-index: 0;
         &.one {
-            height: 100vh;
-            width: 203px;
-            right: 0;
-            z-index: 16;
+            height: 80vh;
+            right: 48px;
             }
             &.two {
-                z-index: 14;
+                height: 60vh;
+                right:159px;
             }
             &.three {
-                z-index: 13;
+                height: 50vh;
+                right: 254px;
             }
             &.four {
-                z-index: 15;
+                height: 40vh;
+                right:336px;
             }
     }
 }

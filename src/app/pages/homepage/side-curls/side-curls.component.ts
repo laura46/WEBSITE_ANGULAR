@@ -30,6 +30,12 @@ export class SideCurlsComponent {
   constructor() { }
 
   curlHoverEffect(lock) {
-    this.stretch[lock] = !this.stretch[lock];
+     this.stretch[lock] = !this.stretch[lock];
+  }
+
+  resetCurls() {
+    for(let key in this.stretch) {
+      this.stretch[key] = false;
+    }
   }
 }
