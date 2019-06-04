@@ -1,6 +1,6 @@
 .curl-container {
     position: relative;
-    width: 800px;
+    width: 50vw;
     height: 100vh;
 }
 .stretch {
@@ -9,7 +9,6 @@
         top: -80px;
         max-width: 203px;
         width:auto;
-        z-index: 0;
         &.one {
             height: 100vh;
             right: 0;
@@ -40,7 +39,6 @@
         position: absolute;
         max-width: 203px;
         width:auto;
-        z-index: 0;
         &.one {
             height: 100vh;
             right: 0;
@@ -71,22 +69,25 @@
         position: absolute;
         max-width: 203px;
         width:auto;
-        z-index: 0;
+        z-index: 1;
+        &:hover {
+            z-index: 0;
+        }
         &.one {
             height: 80vh;
-            right: 48px;
+            right: calc(100vh - 43vw);
             }
             &.two {
                 height: 60vh;
-                right:159px;
+                right: calc(100vw - 87vw);
             }
             &.three {
                 height: 50vh;
-                right: 254px;
+                right: calc(100vw - 83vw);
             }
             &.four {
                 height: 40vh;
-                right:336px;
+                right:calc(100vw - 79vw);
             }
     }
 }
@@ -95,25 +96,26 @@
     max-width: 132px;
     width: auto;
     top: -80px;
+    z-index: 1;
+    &:hover {
+        z-index: 0;
+    }
+    
     &.one {
         height: 80vh;
-        right: 77px;
-        z-index: 16;
+        right: calc(100vh - 43vw); 
     }
     &.two {
         height: 60vh;
-        right: 220px;
-        z-index: 14;
+        right: calc(100vw - 87vw);
     }
     &.three {
-        right: 295px;
         height: 50vh;
-        z-index: 13;
+        right: calc(100vw - 83vw); 
     }
     &.four {
         height: 40vh;
-        right: 369px;
-        z-index: 15;
+        right: calc(100vw - 79vw);
     }
 }
 
@@ -125,32 +127,32 @@
     &.one {
         height: 100vh;
         right: 0;
-        z-index:2;
+       // z-index:2;
     }
     &.two {
-        right: 126px;
+        right: calc(100vw - 93vw);
         height: 90vh;
-        z-index: 9;
+       // z-index: 9;
     }
     &.three {
         height: 80vh;
-        right: 225px;
-        z-index: 12;    
+        right: calc(100vw - 87vw);
+        //z-index: 12;    
     }
     &.four {
         height: 70vh;
-        right: 309px;
-        z-index: 8;
+        right: calc(100vw - 82vw)
+       // z-index: 8;
     }
     &.five {
         height: 62vh;
-        right: 389px;
-        z-index: 5;
+        right: calc(100vw - 77vw);
+       // z-index: 5;
     }
     &.six {
         height: 54vh;
-        right: 452px;
-        z-index: 11;
+        right: calc(100vw - 73vw);
+        //z-index: 11;
     }
 }
 
@@ -161,32 +163,32 @@
     top: -80px;
     &.one {
         height: 100vh;
-        right: 28px;
-        z-index: 7;
+        right: calc(100vw - 98vw);
+        //z-index: 7;
     }
     &.two {
         height: 90vh;
-        right: 152px;
-        z-index: 4;
+        right: calc(100vw - 91.2vw);
+        //z-index: 4;
     }
     &.three {
         height: 80vh;
-        right: 276px;
-        z-index: 10;
+        right: calc(100vw - 83.6vw)
+        //z-index: 10;
     }
     &.four {
         height: 70vh;
-        right: 329px; 
-        z-index: 3;   
+        right: calc(100vw - 80.6vw);
+        //z-index: 3;   
     }
     &.five {
         height: 62vh;
-        right: 435px;
-        z-index: 1;    
+        right: calc(100vw - 74vw);
+        //z-index: 1;    
     }
     &.six {
         height: 54vh;
-        right: 468px;
-        z-index: 6;
+        right: calc(100vw - 72vw);
+        //z-index: 6;
     }
 }

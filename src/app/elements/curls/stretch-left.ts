@@ -7,6 +7,8 @@ import { SideCurlsComponent } from '../../pages/homepage/side-curls/side-curls.c
 })
 export class StretchLeftComponent implements OnInit {
 
+  private count = 0;
+
   constructor(private sidecurls: SideCurlsComponent) { }
 
   ngOnInit() {
@@ -14,8 +16,26 @@ export class StretchLeftComponent implements OnInit {
   }
 
   stretchCurl(event) {
-    this.sidecurls.curlHoverEffect('');
-    
-    console.log(event.selector);
+    if(this.count == 0) {
+      let hoveredCurlClass = event.path[1].className;
+
+      if(hoveredCurlClass.indexOf("overlay") != -1){
+        this.sidecurls.svgClassToCurl(hoveredCurlClass, "overlay");
+      } else {
+        this.sidecurls.svgClassToCurl(hoveredCurlClass, "left");
+      }
+
+      this.count++;
+    }
+  }
+  curlCurl(event) {
+    this.count = 0;
+    let hoveredCurlClass = event.path[1].className;
+
+    if(hoveredCurlClass.indexOf("overlay") != -1){
+      this.sidecurls.svgClassToCurl(hoveredCurlClass, "overlay");
+    } else {
+      this.sidecurls.svgClassToCurl(hoveredCurlClass, "left");
+    }
   }
 }
